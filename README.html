@@ -381,6 +381,68 @@ $(document).ready(function () {
 <p>Investigative Reporters &amp; Editors is making this data available as a public service to journalists covering police agencies throughout the United States. The data is freely available from the <a href="https://www.dla.mil/DispositionServices/Offers/Reutilization/LawEnforcement/PublicInformation/">Department of Defense</a> but the nature of the Excel file can make it difficult to easily navigate.</p>
 <p>The only work IRE has done is to combine these records into a single CSV file. There are other tables available at the web link above, including information about ammunition transfers as well as cancelled orders. If you find problems with this data, you will need to contact the Defense Logistic Agency for clarification.</p>
 </div>
+<div id="some-specific-notes-about-the-data" class="section level3">
+<h3>Some specific notes about the data</h3>
+<p>The <a href="https://www.dla.mil/Portals/104/Documents/DispositionServices/LESO/DISP_AllStatesAndTerritories_03312020.xlsx">original file</a> is an Excel workbook with 53 sheets. According to the agency’s website, the data was initially posted in 2017. However, there are records dating back to the 1990s.</p>
+<p>The readxl package from R was used to import the data and combine all of the records from 53 sheets into one file. There are 141,068 records in total.</p>
+<div id="included-fields" class="section level4">
+<h4>Included fields</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Information</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>state</td>
+<td>Content from cell 2</td>
+</tr>
+<tr class="even">
+<td>station_name_lea</td>
+<td>Content in the second column</td>
+</tr>
+<tr class="odd">
+<td>nsn</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>item_name</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>quantity</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ui</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>acquisition_value</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>demil_code</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>demil_ic</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ship_date</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>station_type</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 
 
